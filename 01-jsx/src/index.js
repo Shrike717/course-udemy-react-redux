@@ -10,9 +10,7 @@ const root = ReactDOM.createRoot(el);
 
 // 4) We will create a component
 function App() {
-  let message = {};
-
-  return <h1>{message}</h1>;
+  return <h1>{new Date().toLocaleTimeString()}</h1>;
 }
 
 // 5) Show the component on the screen
