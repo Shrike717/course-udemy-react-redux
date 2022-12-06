@@ -1,11 +1,11 @@
 import React from 'react';
 
-function App() {
+function ShowAnimal() {
   return (
     <div>
-      Show animal list here
+      Ccow!
     </div>
   )
 }
 
-export default App;
+export default ShowAnimal;
