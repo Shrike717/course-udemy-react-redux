@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import React from 'react';
 import bird from './svg/bird.svg';
 import cat from './svg/cat.svg';
@@ -18,9 +20,20 @@ const svgMap = {
 };
 
 function ShowAnimal({ type }) {
+  const [clicks, setClicks] = useState(0);
+
+  const handleClick = () => {
+    setClicks(clicks + 1);
+  };
+
   return (
-    <div>
+    <div onClick={handleClick}>
       <img alt="animal" src={svgMap[type]}/>
+      <img
+      alt="heart"
+      src={heart}
+      style={ {width: 10 + 10 * clicks + 'px'} }
+      />
     </div>
   )
 }

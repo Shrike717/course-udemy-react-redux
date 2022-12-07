@@ -14,7 +14,7 @@ function App() {
 
   const handleClick = () => {
     setAnimal([...animals, getRandomAnimal()]);
-  }
+  };
 
   const renderedAnimals = animals.map((animal, index) => {
       return <AnimalShow type={animal} key={index} />
@@ -26,7 +26,6 @@ function App() {
       <button onClick={handleClick}>Add Animal</button>
       {renderedAnimals}
     </div>
-
   )
 }
 
