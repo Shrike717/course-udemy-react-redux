@@ -1,9 +1,9 @@
 import React from 'react';
 
-function ShowAnimal() {
+function ShowAnimal({ type }) {
   return (
     <div>
-      Ccow!
+      {type}
     </div>
   )
 }
