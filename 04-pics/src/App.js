@@ -1,7 +1,13 @@
 import React from 'react';
+import SearchBar from './components/SearchBar';
 
 function App() {
-  return <div>App</div>
+  const handleSubmit = (term) => {
+    console.log("Do a search with:", term);
+  };
+  return <div>
+    <SearchBar onSubmit={handleSubmit} />
+    </div>
 }
 
 export default App;
