@@ -1,5 +1,8 @@
-function ImageShow() {
-  return <div>ImageShow</div>
+import React from 'react';
+
+function ImageShow( {image} ) {
+  console.log(image);
+  return <div>{image.id}</div>
 }
 
 export default ImageShow;

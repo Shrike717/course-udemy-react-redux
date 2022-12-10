@@ -1,9 +1,12 @@
 import React from 'react';
+import ImageShow from './ImageShow';
 
+// Hier kommt der Array aus App an.
 function ImageList( {images} ) {
-  return <div>
-    ImageList: {images.length}
-;  </div>
-}
+  const renderedImages = images.map((image) => {
+    return <ImageShow image={image} />
+  });
+  return <div>{renderedImages}</div>
+};
 
 export default ImageList;
