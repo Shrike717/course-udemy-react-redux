@@ -16,7 +16,7 @@ function SearchBar({ onSubmit }) {
 
     // Hier wird handleSubmit aus der App.js aufgerufen und
     // das Suchwort wieder nach oben geschickt.
-    onSubmit({term})
+    onSubmit(term)
   };
 
   // Diese Funktion wird gebraucht um React die Kontrolle über das Eingabefeld
