@@ -12,7 +12,6 @@ function App() {
   // API Request aus
   const handleSubmit = async (term) => {
     const result = await searchImages(term);
-    console.log(result);
 
     // Hier wird das Suchergebnis gleichzeitig benutzt um das PoS images
     // upzudaten. Dieses wird dann als Prop danach runtergeschickt
