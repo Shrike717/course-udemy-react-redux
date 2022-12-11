@@ -1,4 +1,5 @@
 import React from 'react';
+import './SearchBar.css';
 import { useState } from 'react';
 
 // Hier kommt handleSubmit aus der App.js als Prop an.
@@ -32,8 +33,9 @@ function SearchBar({ onSubmit }) {
 
   // Am input-Tag wird jede Eingabe abgefangen und updatet damit das PoS
   // Dann wird mit value die Eingabe ins input-Feld gezwungen.
-  return <div>
+  return <div className="search-bar">
       <form onSubmit={handleFormSubmit}>
+        <label className='search-bar-label'>Enter Search Term:</label>
         <input value={term} onChange={handleChange}/>
       </form>
     </div>
