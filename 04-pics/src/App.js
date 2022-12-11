@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 import { useState } from 'react';
 import SearchBar from './components/SearchBar';
 import ImageList from './components/ImageList';
@@ -19,7 +20,7 @@ function App() {
   };
 
   // Hier wird sie mit Props nach unten zur SearchBar gegeben
-  return <div>
+  return <div className='container'>
     <SearchBar onSubmit={handleSubmit} />
     <ImageList images={images} />
     </div>
