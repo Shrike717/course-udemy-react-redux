@@ -4,25 +4,26 @@ import { useState } from "react";
 function BookCreate({ onCreate} ) {
   const [title, setTitle] = useState("");
 
-  // Überwacht das input-Feld und setzt PoS
+  // Eventt-Handler fürs input-Tag: Überwacht das input-Feld und setzt PoS
   const handleChange = (event) => {
     setTitle(event.target.value);
   };
 
-  // Schickt das PoS hoch
+  // Event-Handler fürs form-Tag: Ruft Event-handler in Parent und schickt das PoS hoch
   const handleSubmit = (event) => {
     event.preventDefault();
     onCreate(title);
     setTitle("");
   }
 
-  return <div>
+  return <div className='book-create'>
+    <h3>Add a book:</h3>
     <form onSubmit={handleSubmit}>
       <label>Title:</label>
-      <input value={title} onChange={handleChange}/>
-      <button>Create!</button>
+      <input className="input" value={title} onChange={handleChange}/>
+      <button className='button'>Create!</button>
     </form>
-  </div>;
+  </div>
 }
 
 export default BookCreate;
