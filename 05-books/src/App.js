@@ -1,10 +1,10 @@
 import React from 'react';
 import { useState } from "react";
 import BookCreate from "./components/BookCreate";
+import BookList from './components/BookList';
 
 function App() {
   const [books, setBooks] = useState([]);
-  console.log(books);
 
   const CreateBook = (title) => {
     const updatedBooks = [
@@ -17,8 +17,8 @@ function App() {
     setBooks(updatedBooks);
   };
 
-  return <div>
-    {books.length}
+  return <div className='app'>
+    <BookList books={books} />
     <BookCreate onCreate={CreateBook} />
   </div>;
 }
