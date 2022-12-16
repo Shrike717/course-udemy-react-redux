@@ -1,3 +1,20 @@
 {
-  "books": []
+  "books": [
+    {
+      "title": "Harry Potter",
+      "id": 1
+    },
+    {
+      "title": "Dark Tower",
+      "id": 2
+    },
+    {
+      "title": "Test 3",
+      "id": 3
+    },
+    {
+      "title": "Test 4",
+      "id": 4
+    }
+  ]
 }
