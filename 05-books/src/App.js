@@ -7,15 +7,18 @@ import BookList from './components/BookList';
 function App() {
   const [books, setBooks] = useState([]);
 
+  // Fetches all records. Returns Object. Records are in data prop
   const fetchBooks = async () => {
     const response = await axios.get("http://localhost:3001/books");
     setBooks(response.data);
   };
 
+  // Runs only on initial render
   useEffect(() => {
     fetchBooks();
   }, []);
 
+  // POST request creates record
   const CreateBook = async (title) => {
    const response = await axios.post("http://localhost:3001/books", {
       title,
@@ -25,13 +28,19 @@ function App() {
     setBooks(updatedBooks);
   };
 
-  const editBookById = (id, newTitle) => {
+  const editBookById = async (id, newTitle) => {
+    const response = await axios.put(`http://localhost:3001/books/${id}`, {
+      title: newTitle
+    })
+    console.log(response);
+
     const updatedBooks = books.map((book) => {
       if (book.id === id) {
-        return { ...book, title: newTitle };
+        return {...book, ...response.data}
       }
       return book;
-    });
+    }
+    );
     setBooks(updatedBooks);
   };
 
