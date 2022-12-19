@@ -4,7 +4,7 @@ import BooksContext from '../context/books';
 
 function BookCreate() {
   const [title, setTitle] = useState("");
-  const { createBook } = useContext(BooksContext);
+  const { CreateBook } = useContext(BooksContext);
 
   // Eventt-Handler fürs input-Tag: Überwacht das input-Feld und setzt PoS
   const handleChange = (event) => {
@@ -14,7 +14,7 @@ function BookCreate() {
   // Event-Handler fürs form-Tag: Ruft Event-handler in Parent und schickt das PoS hoch
   const handleSubmit = (event) => {
     event.preventDefault();
-    createBook(title);
+    CreateBook(title);
     setTitle("");
   }
 
