@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const BooksContext = createContext();
 
-// Custom Povider
+// Custom Povider with the whole logic and parts which are to be shared
 const Provider = ({ children }) => {
   const [books, setBooks] = useState([]);
 
@@ -46,6 +46,7 @@ const Provider = ({ children }) => {
     setBooks(updatedBooks);
   };
 
+  // Object which will be shared
   const valueToShare = {
     books: books,
     deleteBookById,
@@ -56,7 +57,7 @@ const Provider = ({ children }) => {
 
 
   return (
-    // Buildin-Provider
+    // Buildin-Provider with object shared
     <BooksContext.Provider value={valueToShare}>
       {children}
     </BooksContext.Provider>)
