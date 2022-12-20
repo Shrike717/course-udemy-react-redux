@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react';
+import { createContext, useState, useCallback } from 'react';
 import axios from 'axios';
 
 const BooksContext = createContext();
@@ -8,10 +8,10 @@ const Provider = ({ children }) => {
   const [books, setBooks] = useState([]);
 
   // Fetches all records. Returns Object. Records are in data prop
-  const fetchBooks = async () => {
+  const fetchBooks = useCallback(async () => {
     const response = await axios.get("http://localhost:3001/books");
     setBooks(response.data);
-  };
+  }, []);
 
   const CreateBook = async (title) => {
     const response = await axios.post("http://localhost:3001/books", {
