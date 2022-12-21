@@ -1,8 +1,28 @@
 import React from "react";
+import Button from "./Button";
 
 function App() {
   return(
-    <div>App</div>
+    <div>
+      <div>
+        <Button></Button>
+      </div>
+      <div>
+        <Button></Button>
+      </div>
+      <div>
+        <Button></Button>
+      </div>
+      <div>
+        <Button></Button>
+      </div>
+      <div>
+        <Button></Button>
+      </div>
+      <div>
+        <Button></Button>
+      </div>
+    </div>
   )
 };
 
