@@ -1,5 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types"
+// PropTypes müsste hier nicht importiert werden
+import PropTypes from "prop-types";
+import className from "classnames";
+
 
 function Button({
     children,
@@ -23,6 +26,7 @@ Button.propTypes = {
     Number(!!warning) +
     Number(!!success) +
     Number(!!danger);
+    // console.log(count);
 
     if (count > 1) {
       return new Error('Only one of primary, secondary, success, warning, danger can be true')
