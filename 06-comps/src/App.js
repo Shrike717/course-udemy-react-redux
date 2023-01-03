@@ -8,16 +8,16 @@ function App() {
         <Button primary>Click Me!</Button>
       </div>
       <div>
-        <Button>By Now!</Button>
+        <Button secondary>By Now!</Button>
       </div>
       <div>
-        <Button>See Deal!</Button>
+        <Button success>See Deal!</Button>
       </div>
       <div>
-        <Button>Hide Ads!</Button>
+        <Button warning>Hide Ads!</Button>
       </div>
       <div>
-        <Button>Delete!</Button>
+        <Button danger>Delete!</Button>
       </div>
     </div>
   )
