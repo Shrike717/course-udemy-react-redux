@@ -5,19 +5,19 @@ function App() {
   return(
     <div>
       <div>
-        <Button primary>Click Me!</Button>
+        <Button primary rounded outline>Click Me!</Button>
       </div>
       <div>
         <Button secondary>By Now!</Button>
       </div>
       <div>
-        <Button success>See Deal!</Button>
+        <Button success outline>See Deal!</Button>
       </div>
       <div>
         <Button warning>Hide Ads!</Button>
       </div>
       <div>
-        <Button danger>Delete!</Button>
+        <Button danger rounded  outline>Delete!</Button>
       </div>
     </div>
   )
