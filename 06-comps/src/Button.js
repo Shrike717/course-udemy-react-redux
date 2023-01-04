@@ -13,6 +13,7 @@ function Button({
     danger,
     outline,
     rounded,
+    ...rest
   }
   ) {
     const classes = className("flex items-center px-3 py-1.5 border", {
@@ -30,7 +31,7 @@ function Button({
       "text-red-500": outline && danger,
     })
 
-    return <button className={classes}>{children}</button>
+    return <button {...rest} className={classes}>{children}</button>
 };
 
 Button.propTypes = {
@@ -41,7 +42,6 @@ Button.propTypes = {
     Number(!!warning) +
     Number(!!success) +
     Number(!!danger);
-    // console.log(count);
 
     if (count > 1) {
       return new Error('Only one of primary, secondary, success, warning, danger can be true')
