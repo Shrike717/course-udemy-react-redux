@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from "react";
 
-function Dropdown({ options }) {
+function Dropdown({ options, selected, onSelect }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = (() => {
@@ -9,10 +9,12 @@ function Dropdown({ options }) {
     setIsOpen(!isOpen);
   })
 
-  // Test für funktinales Übertragung eines Werts aus der Map-Funktion nach drauseen
+  // Funktionales Übertragung eines Werts aus der Map-Funktion nach drausen
   const handleOptionClick = ((option) => {
+    // Klaoppt Menu wieder ein
     setIsOpen(false);
-    console.log(option);
+    // Schickt Objekt option nach oben zur arent
+    onSelect(option);
   })
 
   const renderedOptions = options.map((option) => {
@@ -23,9 +25,14 @@ function Dropdown({ options }) {
     )
   })
 
+  let content = "Select..."
+  if (selected) {
+    content = selected.label
+  }
+
   return (
     <div>
-      <div onClick={handleClick}>Select...</div>
+      <div onClick={handleClick}>{content}</div>
       <div >{renderedOptions}</div>
     </div>
   )

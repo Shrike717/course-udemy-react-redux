@@ -9,10 +9,15 @@ const options = [
 ];
 
 function App() {
-  // const [selected, setSelected] = useState(null);
+  const [selected, setSelected] = useState(null);
+
+  const  handleSelect = (option) => {
+    setSelected(option);
+    console.log(option);
+  };
 
   return(
-    <div><Dropdown options={options} /></div>
+    <div><Dropdown options={options} selected={selected} onSelect={handleSelect}/></div>
   )
 };
 
