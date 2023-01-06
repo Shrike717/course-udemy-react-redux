@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from "react";
 
-function Dropdown({ options, selected, onSelect }) {
+function Dropdown({ options, value, onChange }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = (() => {
@@ -14,7 +14,7 @@ function Dropdown({ options, selected, onSelect }) {
     // Klaoppt Menu wieder ein
     setIsOpen(false);
     // Schickt Objekt option nach oben zur arent
-    onSelect(option);
+    onChange(option);
   })
 
   const renderedOptions = options.map((option) => {
@@ -28,7 +28,7 @@ function Dropdown({ options, selected, onSelect }) {
   return (
     <div>
       <div onClick={handleClick}>
-        {selected?.label || "Selected..."}
+        {value?.label || "Selected..."}
       </div>
       <div >{renderedOptions}</div>
     </div>

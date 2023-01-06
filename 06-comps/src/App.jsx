@@ -13,11 +13,10 @@ function App() {
 
   const  handleSelect = (option) => {
     setSelected(option);
-    console.log(option);
   };
 
   return(
-    <div><Dropdown options={options} selected={selected} onSelect={handleSelect}/></div>
+    <div><Dropdown options={options} value={selected} onChange={handleSelect}/></div>
   )
 };
 
