@@ -25,14 +25,11 @@ function Dropdown({ options, selected, onSelect }) {
     )
   })
 
-  let content = "Select..."
-  if (selected) {
-    content = selected.label
-  }
-
   return (
     <div>
-      <div onClick={handleClick}>{content}</div>
+      <div onClick={handleClick}>
+        {selected?.label || "Selected..."}
+      </div>
       <div >{renderedOptions}</div>
     </div>
   )
