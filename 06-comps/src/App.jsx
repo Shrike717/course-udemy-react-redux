@@ -16,7 +16,9 @@ function App() {
   };
 
   return(
-    <div><Dropdown options={options} value={selected} onChange={handleSelect}/></div>
+    <div className="flex">
+      <Dropdown options={options} value={selected} onChange={handleSelect}/>
+    </div>
   )
 };
 
