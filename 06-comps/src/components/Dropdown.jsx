@@ -10,7 +10,14 @@ function Dropdown({ options, value, onChange }) {
 
   useEffect(() => {
     const handler = (event) => {
-      // console.log(divEl.current);
+      // Checkt vorher, ob es das root-Element momentan gibt. Wenn nicht, wird Funkion beendet
+      if (!divEl.current) {
+        return;
+      }
+      // Checkt on Klick ausserhlab des Dropdown liegt. Wenn ja, einklappen.
+      if (!divEl.current.contains(event.target)) {
+        setIsOpen(false);
+      }
     };
     // Event Listener um Klicks zu ermitteln.
     document.addEventListener('click', handler, true);
