@@ -27,7 +27,7 @@ function ButtonPage() {
         <Button warning>Hide Ads!</Button>
       </div>
       <div>
-        <Button danger rounded  outline>Delete!</Button>
+        <Button danger rounded outline>Delete!</Button>
       </div>
     </div>
   )
