@@ -21,7 +21,7 @@ function Dropdown({ options, value, onChange }) {
     };
     // Event Listener um Klicks zu ermitteln.
     document.addEventListener('click', handler, true);
-    // Clear Funktion für Event  Listener
+    // Clear Funktion für Event Listener
     return () => {
       document.removeEventListener('click', handler);
     };
