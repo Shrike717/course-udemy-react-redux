@@ -1,7 +1,16 @@
-import { toBeEnabled } from '@testing-library/jest-dom/dist/matchers'
 import React from 'react'
 
 function Table({ data }) {
+  const renderedRows = data.map((fruit) => {
+    return(
+      <tr key={fruit.name}>
+        <td>{fruit.name}</td>
+        <td>{fruit.color}</td>
+        <td>{fruit.score}</td>
+      </tr>
+    )
+  });
+
   return (
     <table>
       <thead>
@@ -12,7 +21,7 @@ function Table({ data }) {
         </tr>
       </thead>
       <tbody>
-
+        {renderedRows}
       </tbody>
     </table>
   )
