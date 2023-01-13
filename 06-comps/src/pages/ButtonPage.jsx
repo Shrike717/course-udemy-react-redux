@@ -12,22 +12,22 @@ function ButtonPage() {
         </Button>
       </div>
       <div>
-        <Button secondary>
+        <Button secondary className="mb-5">
           <GoCloudDownload />
           By Now!
           </Button>
       </div>
       <div>
-        <Button success outline>
+        <Button success outline className="mb-5">
           <GoDatabase />
           See Deal!
           </Button>
       </div>
       <div>
-        <Button warning>Hide Ads!</Button>
+        <Button warning className="mb-5">Hide Ads!</Button>
       </div>
       <div>
-        <Button danger rounded outline>Delete!</Button>
+        <Button danger rounded outline className="mb-5">Delete!</Button>
       </div>
     </div>
   )
