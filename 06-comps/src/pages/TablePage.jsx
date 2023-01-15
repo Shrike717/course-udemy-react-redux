@@ -9,13 +9,13 @@ function TablePage() {
     { name: "Banana", color: "bg-yellow-500", score: 1 },
     { name: "Lime", color: "bg-green-500", score: 4 },
   ];
-  //Array mit Objekten, welche festlegen wieviele Spalten es gibbt und was diese machen
+  //Array mit Objekten, welche festlegen, wieviele Spalten es gibt und was diese machen
   const config  = [
     { label: "Fruits" ,
       render: (fruit) => fruit.name,
     },
     { label: "Color",
-      render: (fruit) => fruit.color,
+      render: (fruit) => <div className={`p-3 m-2 ${fruit.color}`}></div>,
     },
     { label: "Score",
       render: (fruit) => fruit.score,
