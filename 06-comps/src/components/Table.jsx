@@ -3,6 +3,10 @@ import React from 'react'
 function Table({ data, config, keyFn }) {
   // Dynamisches Erzeugen der Table Header
   const renderedHeaders = config.map((column) => {
+    console.log(column);
+    if (column.header) {
+      return column.header();
+    }
     return(
       <th key={column.label}>{column.label}</th>
     )
