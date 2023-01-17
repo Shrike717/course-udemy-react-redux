@@ -12,7 +12,7 @@ function TablePage() {
   ];
   //Array mit Objekten, welche festlegen, wieviele Spalten es gibt und was diese machen
   const config  = [
-    { label: "Fruits" ,
+    { label: "Name" ,
       render: (fruit) => fruit.name,
       sortValue: (fruit) => fruit.name,
     },
