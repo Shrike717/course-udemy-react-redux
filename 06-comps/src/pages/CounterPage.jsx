@@ -4,7 +4,9 @@ import Button from  "../components/Button";
 import Panel from "../components/Panel";
 
 const INCREMENT_COUNT = "increment";
+const DECREMENT_COUNT = "decrement";
 const SET_VALUE_TO_ADD = "set-value-to-add";
+const ADD_VALUE_TO_COUNT = "add-value-to-count"
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -13,25 +15,34 @@ const reducer = (state, action) => {
         ...state,
         count: state.count + 1,
       }
+    case DECREMENT_COUNT:
+      return {
+        ...state,
+        count: state.count - 1,
+      }
     case SET_VALUE_TO_ADD:
       return {
         ...state,
         valuetoAdd: action.payload,
       }
+      case ADD_VALUE_TO_COUNT:
+        return {
+          ...state,
+          count: state.count + state.valuetoAdd,
+          valuetoAdd: 0,
+        }
     default:
       return state;
   };
 };
 
 function CounterPage({ initialCount }) {
-  // const [count, setCount] = useState(initialCount);
-  // const [valuetoAdd, setValuetoAdd] = useState(0);
-
+  // Aufruf von useeReducer und setzen der iniitialen Values
   const  [state, dispatch] = useReducer(reducer, {
     count: initialCount,
     valuetoAdd: 0,
   });
-  console.log(state);
+  // console.log(state);
 
   const increment = () => {
     dispatch({
@@ -40,7 +51,9 @@ function CounterPage({ initialCount }) {
   };
 
   const decrement = () => {
-    // setCount(count - 1);
+    dispatch({
+      type: DECREMENT_COUNT,
+    });
   };
 
   // Funktion um Kontrolle über Input Field zu haben.
@@ -56,7 +69,9 @@ function CounterPage({ initialCount }) {
   // Funktion um Wert bei Klick zu Counter zu addieren
   const handleSubmit = (event) => {
     event.preventDefault();
-
+        dispatch({
+      type: ADD_VALUE_TO_COUNT,
+    })
   };
 
   return (
