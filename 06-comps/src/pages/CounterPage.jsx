@@ -7,21 +7,20 @@ const INCREMENT_COUNT = "increment";
 const SET_VALUE_TO_ADD = "set-value-to-add";
 
 const reducer = (state, action) => {
-  if (action.type === INCREMENT_COUNT) {
-    return {
-      ...state,
-      count: state.count + 1,
-    }
-  }
-
-  if (action.type === SET_VALUE_TO_ADD) {
-    return {
-      ...state,
-      valuetoAdd: action.payload,
-    }
-  }
-
-  return state;
+  switch (action.type) {
+    case INCREMENT_COUNT:
+      return {
+        ...state,
+        count: state.count + 1,
+      }
+    case SET_VALUE_TO_ADD:
+      return {
+        ...state,
+        valuetoAdd: action.payload,
+      }
+    default:
+      return state;
+  };
 };
 
 function CounterPage({ initialCount }) {
