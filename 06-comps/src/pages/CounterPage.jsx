@@ -4,10 +4,21 @@ import Button from  "../components/Button";
 import Panel from "../components/Panel";
 
 const reducer = (state, action) => {
-  return {
-    ...state,
-    count: state.count + 1,
+  if (action.type === "increment") {
+    return {
+      ...state,
+      count: state.count + 1,
+    }
   }
+
+  if (action.type === "change-value-to-add") {
+    return {
+      ...state,
+      valuetoAdd: action.payload,
+    }
+  }
+
+  return state;
 };
 
 function CounterPage({ initialCount }) {
@@ -21,23 +32,29 @@ function CounterPage({ initialCount }) {
   console.log(state);
 
   const increment = () => {
-    dispatch();
+    dispatch({
+      type: "increment",
+    });
   };
 
   const decrement = () => {
     // setCount(count - 1);
   };
+
+  // Funktion um Kontrolle über Input Field zu habeen.
   const handleChange = (event) => {
     const value = parseInt(event.target.value) || 0;
 
-    // setValuetoAdd(value);
+    dispatch({
+      type: "change-value-to-add",
+      payload: value,
+    })
   };
 
+  // Funktion um Wert bei Klick zu Counter zu addieren
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // setCount(count + valuetoAdd);
-    // setValuetoAdd(0);
   };
 
   return (
