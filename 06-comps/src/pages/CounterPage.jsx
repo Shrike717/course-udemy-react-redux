@@ -1,4 +1,5 @@
 import React from 'react'
+import produce from "immer";
 import {useReducer} from "react";
 import Button from  "../components/Button";
 import Panel from "../components/Panel";
@@ -11,34 +12,26 @@ const ADD_VALUE_TO_COUNT = "add-value-to-count"
 const reducer = (state, action) => {
   switch (action.type) {
     case INCREMENT_COUNT:
-      return {
-        ...state,
-        count: state.count + 1,
-      }
+      state.count = state.count + 1;
+      return;
     case DECREMENT_COUNT:
-      return {
-        ...state,
-        count: state.count - 1,
-      }
+      state.count = state.count - 1;
+      return;
     case SET_VALUE_TO_ADD:
-      return {
-        ...state,
-        valuetoAdd: action.payload,
-      }
+      state.valuetoAdd = action.payload;
+      return;
       case ADD_VALUE_TO_COUNT:
-        return {
-          ...state,
-          count: state.count + state.valuetoAdd,
-          valuetoAdd: 0,
-        }
+        state.count = state.count + state.valuetoAdd;
+        state.valuetoAdd = 0;
+        return;
     default:
-      return state;
+      return;
   };
 };
 
 function CounterPage({ initialCount }) {
   // Aufruf von useeReducer und setzen der iniitialen Values
-  const  [state, dispatch] = useReducer(reducer, {
+  const  [state, dispatch] = useReducer(produce(reducer), {
     count: initialCount,
     valuetoAdd: 0,
   });
