@@ -8,5 +8,5 @@ const store = configureStore({
     form: formReducer
   }
 });
-
+// console.log(store.getState())
 export { store, changeName, changeCost, addCar, removeCar, changeSearchTerm}
