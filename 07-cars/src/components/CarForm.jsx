@@ -1,18 +1,26 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import  { changeName } from "../store";
+import  { changeName,changeCost } from "../store";
 
 function CarForm() {
   const dispatch = useDispatch();
 
-  // Holt sich Zugang zum gesamten State Objekt
-  const name = useSelector((state) => {
-    return state.form.name;
+  // Holt sich Zugang zum gesamten State Objekt. PoS werden dann destrukturiert.
+  const { name, cost} = useSelector((state) => {
+    return {
+      name: state.form.name,
+      cost: state.form.cost,
+    };
   });
 
   const  handleNameChange = (event) => {
-    console.log(event.target.value);
-    dispatch(changeName(event.target.value))
+    // console.log(event.target.value);
+    dispatch(changeName(event.target.value));
+  };
+  const  handleCostChange = (event) => {
+    const carCost = parseInt(event.target.value) || 0;
+    console.log(carCost);
+    dispatch(changeCost(carCost))
   };
 
   return (
@@ -26,6 +34,16 @@ function CarForm() {
               className="input is-expanded"
               value={name}
               onChange={handleNameChange}
+             />
+          </div>
+
+          <div className="field">
+            <label className="label">Cost</label>
+            <input
+              className="input is-expanded"
+              value={cost || ""}
+              onChange={handleCostChange}
+              type="number"
              />
           </div>
         </div>
