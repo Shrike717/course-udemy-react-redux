@@ -1,7 +1,9 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { removeCar } from '../store';
 
 function CarList() {
+  const dispatch = useDispatch();
 
   // Get Array data with cars
   const cars = useSelector((state) => {
@@ -9,7 +11,7 @@ function CarList() {
   });
 
   const handleClickDelete = (car) => {
-    //
+    dispatch(removeCar(car.id));
   };
 
 const renderedCars = cars.map((car) => {
