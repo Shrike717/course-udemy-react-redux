@@ -6,8 +6,10 @@ function CarList() {
   const dispatch = useDispatch();
 
   // Get Array data with cars
-  const cars = useSelector((state) => {
-    return state.cars.data;
+  const cars = useSelector(({ cars: { data, searchTerm }}) => {
+    return data.filter((car) =>
+      car.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
   });
 
   const handleClickDelete = (car) => {
