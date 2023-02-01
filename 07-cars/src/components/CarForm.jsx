@@ -17,9 +17,8 @@ function CarForm() {
     // console.log(event.target.value);
     dispatch(changeName(event.target.value));
   };
-  const  handleCostChange = (event) => {
+  const handleCostChange = (event) => {
     const carCost = parseInt(event.target.value) || 0;
-    console.log(carCost);
     dispatch(changeCost(carCost))
   };
 
