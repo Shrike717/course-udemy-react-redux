@@ -6,10 +6,17 @@ function CarList() {
   const dispatch = useDispatch();
 
   // Get Array data with cars and  filter it by searchTerm
-  const cars = useSelector(({ cars: { data, searchTerm }}) => {
-    return data.filter((car) =>
+  // Return filteredCars ad PoS of name the user is typing in
+  const { cars, name } = useSelector(({ form, cars: { data, searchTerm }}) => {
+    const filteredCars =  data.filter((car) =>
       car.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
+
+    return {
+      cars: filteredCars,
+      name: form.name
+    }
+
   });
 
   const handleClickDelete = (car) => {
@@ -17,8 +24,9 @@ function CarList() {
   };
 
 const renderedCars = cars.map((car) => {
+  const bold = name && car.name.toLowerCase().includes(name.toLowerCase());
   return(
-    <div key={car.id} className="panel">
+    <div key={car.id} className={`panel ${bold && "bold"}`}>
       <p>{car.name} - ${car.cost}</p>
       <button
         className="button is-danger"
