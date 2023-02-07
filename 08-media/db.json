@@ -1,6 +1,13 @@
 {
   "users": [
-    { "id": 1, "name": "Myra" }
+    {
+      "id": 1,
+      "name": "Myra"
+    },
+    {
+      "name": "Nettie Turner",
+      "id": 2
+    }
   ],
   "albums": [],
   "photos": []
