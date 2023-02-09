@@ -2,55 +2,7 @@
   "users": [
     {
       "id": 1,
-      "name": "Myra"
-    },
-    {
-      "name": "Maria Kshlerin",
-      "id": 2
-    },
-    {
-      "name": "Miss Roman Stroman",
-      "id": 3
-    },
-    {
-      "name": "Boyd Heathcote",
-      "id": 4
-    },
-    {
-      "name": "Bert Kulas Jr.",
-      "id": 5
-    },
-    {
-      "name": "Jennifer Jaskolski",
-      "id": 6
-    },
-    {
-      "name": "Tanya Corkery",
-      "id": 7
-    },
-    {
-      "name": "Jerald Bogan",
-      "id": 8
-    },
-    {
-      "name": "Dr. Pearl Mayert IV",
-      "id": 9
-    },
-    {
-      "name": "Harriet Marvin",
-      "id": 10
-    },
-    {
-      "name": "Celia Bogan",
-      "id": 11
-    },
-    {
-      "name": "Guy Hoeger",
-      "id": 12
-    },
-    {
-      "name": "Neil Mann",
-      "id": 13
+      "name": "Myra Thiel"
     }
   ],
   "albums": [],

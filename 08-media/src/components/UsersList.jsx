@@ -8,23 +8,27 @@ import { useThunk } from "../hooks/use-thunk";
 
 
 function UsersList() {
+  // Here using custom hook useThunk
   const [doFetchUsers, isLoadingUsers, loadingUsersError] = useThunk(fetchUsers);
   const [doCreateUser, isCreatingUser, creatingUserError] = useThunk(addUser);
 
+  // Making use of biig state object from store
   const { data } = useSelector((state) => {
     return state.users;
   });
 
+  // Fetching all users when app starts
   useEffect(() => {
     doFetchUsers();
   }, [doFetchUsers]);
 
+  // Adding a user
   const handleUserAdd = () => {
     doCreateUser();
   };
 
+  // Displaying loader, error or user list
   let content;
-
   if (isLoadingUsers) {
     content = <Skeleton times={6} className="h-10 w-full"/>;
   } else if (loadingUsersError) {
