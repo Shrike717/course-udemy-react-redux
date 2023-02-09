@@ -5,6 +5,7 @@ import { fetchUsers, addUser } from "../store";
 import Skeleton from './Skeleton';
 import Button from "./Button";
 import { useThunk } from "../hooks/use-thunk";
+import UsersListItem from './UsersListItem';
 
 
 function UsersList() {
@@ -36,11 +37,7 @@ function UsersList() {
   } else {
     content = data.map((user) => {
       return(
-        <div key={user.id} className='mb-2 border rounded'>
-          <div className="p-2 justify-between items-center cursor-pointer">
-            {user.name}
-          </div>
-        </div>
+        <UsersListItem key={user.id} user={user}/>
       )
     })
   }
