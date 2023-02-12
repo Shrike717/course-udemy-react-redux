@@ -14,6 +14,11 @@
       "id": 10,
       "title": "Hiking alps",
       "userId": 1
+    },
+    {
+      "userId": 1,
+      "title": "Oriental Cotton Fish",
+      "id": 11
     }
   ],
   "photos": []
