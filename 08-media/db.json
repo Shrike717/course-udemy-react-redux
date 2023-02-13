@@ -14,6 +14,36 @@
       "id": 10,
       "title": "Hiking alps",
       "userId": 1
+    },
+    {
+      "userId": 1,
+      "title": "Ergonomic Cotton Chair",
+      "id": 11
+    },
+    {
+      "userId": 1,
+      "title": "Generic Soft Cheese",
+      "id": 12
+    },
+    {
+      "userId": 1,
+      "title": "Rustic Metal Pizza",
+      "id": 13
+    },
+    {
+      "userId": 1,
+      "title": "Modern Soft Hat",
+      "id": 14
+    },
+    {
+      "userId": 1,
+      "title": "Luxurious Granite Bike",
+      "id": 15
+    },
+    {
+      "userId": 1,
+      "title": "Recycled Soft Towels",
+      "id": 16
     }
   ],
   "photos": []
