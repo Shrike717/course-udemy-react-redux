@@ -14,6 +14,9 @@ export const store = configureStore({
   }
 });
 
+// Temporary for accessing store in console:
+//window.store = store;
+
 setupListeners(store.dispatch);
 
 //console.log(store.getState());
