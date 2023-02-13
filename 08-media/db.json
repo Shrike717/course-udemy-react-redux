@@ -7,10 +7,6 @@
     {
       "name": "Mercedes Runolfsdottir",
       "id": 2
-    },
-    {
-      "name": "Mr. Lula Waters",
-      "id": 3
     }
   ],
   "albums": [
@@ -18,16 +14,6 @@
       "id": 10,
       "title": "Hiking alps",
       "userId": 1
-    },
-    {
-      "userId": 1,
-      "title": "Refined Frozen Keyboard",
-      "id": 11
-    },
-    {
-      "userId": 1,
-      "title": "Intelligent Concrete Chicken",
-      "id": 12
     }
   ],
   "photos": []
