@@ -7,6 +7,10 @@
     {
       "name": "Mercedes Runolfsdottir",
       "id": 2
+    },
+    {
+      "name": "Mr. Lula Waters",
+      "id": 3
     }
   ],
   "albums": [
@@ -19,6 +23,21 @@
       "userId": 1,
       "title": "Oriental Cotton Fish",
       "id": 11
+    },
+    {
+      "userId": 1,
+      "title": "Rustic Plastic Chips",
+      "id": 12
+    },
+    {
+      "userId": 3,
+      "title": "Recycled Metal Mouse",
+      "id": 13
+    },
+    {
+      "userId": 1,
+      "title": "Licensed Wooden Shirt",
+      "id": 14
     }
   ],
   "photos": []
