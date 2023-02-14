@@ -19,6 +19,16 @@
       "userId": 2,
       "title": "Elegant Metal Computer",
       "id": 11
+    },
+    {
+      "userId": 1,
+      "title": "Bespoke Granite Gloves",
+      "id": 12
+    },
+    {
+      "userId": 1,
+      "title": "Modern Granite Bike",
+      "id": 13
     }
   ],
   "photos": []

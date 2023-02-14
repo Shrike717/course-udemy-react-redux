@@ -3,7 +3,7 @@ import { useFetchAlbumsQuery, useAddAlbumMutation, useRemoveAlbumMutation } from
 import Skeleton from "./Skeleton";
 import ExpandablePanel from "./ExpandablePanel";
 import Button from "./Button";
-import { GoTrashcan } from "react-icons/go";
+import AlbumsListItem from './AlbumsListItem';
 
 
 
@@ -16,10 +16,6 @@ function AlbumsList({ user }) {
     addAlbum(user);
   }
 
-  const handleClick = (album) => {
-    removeAlbum(album);
-  }
-
     // Displaying loader, error or albums list
     let content;
     if (isLoading) {
@@ -28,19 +24,7 @@ function AlbumsList({ user }) {
       content =  <div>Error fetching data...</div>;
     } else {
       content = data.map((album) => {
-        //const header = <div>{album.title}</div>
-        const header =  <>
-        <Button loading={isLoading} onClick={() => handleClick(album)}>
-          <GoTrashcan />
-        </Button>
-        {error && <div>Error deleting album</div>}
-        {album.title}
-      </>
-        return(
-          <ExpandablePanel key={album.id} header={header}>
-            List of Photos in  the album.
-          </ExpandablePanel>
-        )
+        return <AlbumsListItem key={album.id} album={album}/>
       })
     }
 
