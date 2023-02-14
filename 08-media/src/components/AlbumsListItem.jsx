@@ -10,6 +10,7 @@ function AlbumsListItem({ album }) {
 
   const handleRemoveAlbum = () => {
     removeAlbum(album);
+    console.log(album);
   }
 
   const header =
