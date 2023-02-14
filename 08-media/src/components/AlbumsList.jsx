@@ -23,7 +23,7 @@ function AlbumsList({ user }) {
       content =  <div>Error fetching data...</div>;
     } else {
       content = data.map((album) => {
-        return <AlbumsListItem key={album.id} album={album}/>
+        return <AlbumsListItem key={album.id} album={album} />
       })
     }
 

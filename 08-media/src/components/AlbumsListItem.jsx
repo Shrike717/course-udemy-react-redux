@@ -5,12 +5,11 @@ import Button from './Button';
 import { useRemoveAlbumMutation } from '../store'
 
 
-function AlbumsListItem({ album }) {
+function AlbumsListItem({ album, user }) {
   const [removeAlbum, results] = useRemoveAlbumMutation();
 
   const handleRemoveAlbum = () => {
     removeAlbum(album);
-    console.log(album);
   }
 
   const header =
