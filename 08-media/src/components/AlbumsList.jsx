@@ -1,5 +1,5 @@
 import React from 'react'
-import { useFetchAlbumsQuery, useAddAlbumMutation, useRemoveAlbumMutation } from '../store'
+import { useFetchAlbumsQuery, useAddAlbumMutation } from '../store'
 import Skeleton from "./Skeleton";
 import ExpandablePanel from "./ExpandablePanel";
 import Button from "./Button";
@@ -10,7 +10,6 @@ import AlbumsListItem from './AlbumsListItem';
 function AlbumsList({ user }) {
   const { data, error, isLoading } = useFetchAlbumsQuery(user);
   const [addAlbum, results] = useAddAlbumMutation();
-  const [removeAlbum, removeAlbumResults] = useRemoveAlbumMutation();
 
   const handleAddAlbum = () => {
     addAlbum(user);
