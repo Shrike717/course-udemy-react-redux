@@ -16,7 +16,7 @@ function AlbumsList({ user }) {
     // Displaying loader, error or albums list
     let content;
     if (isLoading) {
-      content = <Skeleton times={3}/>;
+      content = <Skeleton times={3} className="h-10 w-full"/>;
     } else if (error) {
       content =  <div>Error fetching data...</div>;
     } else {
