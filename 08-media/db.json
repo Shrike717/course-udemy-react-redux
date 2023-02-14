@@ -16,34 +16,19 @@
       "userId": 1
     },
     {
-      "userId": 1,
-      "title": "Ergonomic Cotton Chair",
+      "userId": 2,
+      "title": "Tasty Soft Fish",
       "id": 11
     },
     {
       "userId": 1,
-      "title": "Generic Soft Cheese",
+      "title": "Unbranded Soft Shirt",
       "id": 12
     },
     {
       "userId": 1,
-      "title": "Rustic Metal Pizza",
+      "title": "Rustic Bronze Chicken",
       "id": 13
-    },
-    {
-      "userId": 1,
-      "title": "Modern Soft Hat",
-      "id": 14
-    },
-    {
-      "userId": 1,
-      "title": "Luxurious Granite Bike",
-      "id": 15
-    },
-    {
-      "userId": 1,
-      "title": "Recycled Soft Towels",
-      "id": 16
     }
   ],
   "photos": []

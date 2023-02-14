@@ -1,10 +1,22 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import  { faker } from "@faker-js/faker";
 
+// DEV ONLY!!! Remove fpr production
+const pause = (duration) => {
+  return new Promise((resolve) => {
+    setTimeout(resolve, duration)
+  })
+};
+
 const albumsApi = createApi({
   reducerPath: "albums",
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:3005",
+    // DEV ONLY!!! Remove for production
+    fetchFn: async (...args) => {
+      await pause(1000);
+      return fetch(...args);
+    },
   }),
   endpoints(builder) {
     return {
