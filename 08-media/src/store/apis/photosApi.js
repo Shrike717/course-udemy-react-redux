@@ -9,11 +9,39 @@ const photosApi = createApi({
   endpoints(builder) {
     return {
       fetchPhotos: builder.query({
+        query: (album) => {
+          return {
+            url: "/photos",
+            params: {
+              albumId: album.id,
+            },
+            method: "GET",
+          };
+        },
       }),
       addPhoto: builder.mutation({
+        query: (album) =>  {
+          return {
+            url: "/photos",
+            method: "POST",
+            body: {
+              albumId: album.id,
+              url: faker.image.abstract(150, 150, true)
+            }
+          }
+        },
       }),
       removePhoto: builder.mutation({
+        query: (photo) => {
+          return {
+            url: `/photos/${photo.id}`,
+            method: "DELETE",
+          }
+        }
       }),
     }
   }
 })
+
+export const { useFetchPhotosQuery, useAddPhotoMutation, useRemovePhotoMutation } = photosApi;
+export { photosApi };
