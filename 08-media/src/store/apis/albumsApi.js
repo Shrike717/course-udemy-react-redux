@@ -12,9 +12,9 @@ const albumsApi = createApi({
   reducerPath: "albums",
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:3005",
-    // DEV ONLY!!! Remove for production
+    // DEV ONLY!!! Remove for production. (I was  setting the delay  in pause to 0)
     fetchFn: async (...args) => {
-      await pause(1000);
+      await pause(0);
       return fetch(...args);
     },
   }),
