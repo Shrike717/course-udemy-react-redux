@@ -1,4 +1,4 @@
-```markdown
+
 # Modern React with Redux (Update 2023) | Stephen Grider
 
 ## Course Description
@@ -48,4 +48,4 @@ This Udemy course, led by Stephen Grider, provided a comprehensive introduction 
 This repository contains the projects and applications created using this course.
 
 [Course Link](https://www.udemy.com/course/react-redux/?couponCode=ST18MT62524)
-```
+
