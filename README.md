@@ -43,9 +43,7 @@ This Udemy course, led by Stephen Grider, provided a comprehensive introduction 
 12. **Async Thunk Functions and Redux-Toolkit-Query:**
     - Handling asynchronous operations with thunks. Creating APIs and automatic data re-fetching using Redux-Toolkit-Query.
 
-### Project Repository
 
-This repository contains the projects and applications created using this course.
 
-[Course Link](https://www.udemy.com/course/react-redux/?couponCode=ST18MT62524)
+This repository contains the projects and applications created using this course: [Course Link](https://www.udemy.com/course/react-redux/?couponCode=ST18MT62524)
 
